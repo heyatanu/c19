@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C19TRACKER</title>
+    <link rel="icon" href="./images/logo.ico">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo">c<span class="fas fa-virus"></span>vid-19</a>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a class="active" href="#home">home</a>
+        <a href="./india/">India</a>
+        <a href="./global/">Global</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- precautions section starts  -->
+
+<section class="precautions" id="home">
+
+    <h1 class="heading">Covid-19 updated data</h1>
+
+    <div class="column">
+
+        <div class="box-container">
+
+            <h3 class="title">global data</h3>
+
+            <div class="box">
+                <img src="/images/confirmed.png" alt="">
+                <div class="info">
+                    <h3>Total Confirmed Case</h3>
+                    <h3 id="tcg">000000</h3>
+                    <h3 id="dcg"> ^ 123</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/images/deaths.png" alt="">
+                <div class="info">
+                    <h3>Total Deaths Case</h3>
+                    <h3 id="tdg">000000</h3>
+                    <h3 id="ddg"> ^ 123</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/images/recovered.png" alt="">
+                <div class="info">
+                    <h3>Total Recovered Case</h3>
+                    <h3 id="trg">000000</h3>
+                    <h3 id="drg"> ^ 123</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="info">
+                    <h3>last time update</h3>
+                    <h3 id="lastupdateglobal">000000</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box-container">
+
+            <h3 class="title">india data</h3>
+
+            <div class="box">
+                <img src="/images/confirmed.png" alt="">
+                <div class="info">
+                    <h3>Total Confirmed Case</h3>
+                    <h3 id="tci">000000</h3>
+                    <h3 id="dci"> ^ 123</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/images/deaths.png" alt="">
+                <div class="info">
+                    <h3>Total Deaths Case</h3>
+                    <h3 id="tdi">000000</h3>
+                    <h3 id="ddi"> ^ 123</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/images/recovered.png" alt="">
+                <div class="info">
+                    <h3>Total Recovered Case</h3>
+                    <h3 id="tri">000000</h3>
+                    <h3 id="dri"> ^ 123</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="info">
+                    <h3>last time update</h3>
+                    <h3 id="lastupdateindia">000000</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- precautions section ends -->
+
+
+<!-- global map section start -->
+<div id="regions_div" style="height: 500px;display: block; margin: 0 auto;"></div>
+<!-- global map section ends -->
+
+
+<!-- scroll top  -->
+
+<a href="#home" class="scroll-top">
+    <img src="images/scroll-img.png" alt="">
+</a>
+
+
+
+<footer>
+    <h3>created by <a href="https://heyatanu.github.io/me/">ATANU DUTTA</a>. this data are not verified by the creator. the data fetch from apis.</h3>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!-- custom js file link  -->
+<script src="./js/script.js"></script>
+<script src="./datafetch/script.js"></script>
+
+
+</body>
+</html>

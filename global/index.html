@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBAL DATA</title>
+    <link rel="icon" href="./../images/logo.ico">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./../css/style.css">
+    <style>
+        th,td{
+            font-size: 1.5rem;font-weight: bold;
+    
+        }
+        input{
+            border: 1px solid black;
+            font-size: 15px;
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            border-radius: 5%;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <a href="#" class="logo">c<span class="fas fa-virus"></span>vid-19</a>
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a class="active" href="#home">Global</a>
+        <a  href="./../">home</a>
+        <a href="./../india/">India</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- precautions section starts  -->
+
+<section class="precautions" id="home">
+
+    <h1 class="heading">Covid-19 updated data</h1>
+
+    <div class="column">
+
+        <div class="box-container">
+
+            <h3 class="title">global data</h3>
+
+            <div class="box">
+                <img src="/images/confirmed.png" alt="">
+                <div class="info">
+                    <h3>Total Confirmed Case</h3>
+                    <h3 id="tcg">000000</h3>
+                    <h3 id="dcg"> ^ 123</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/images/deaths.png" alt="">
+                <div class="info">
+                    <h3>Total Deaths Case</h3>
+                    <h3 id="tdg">000000</h3>
+                    <h3 id="ddg"> ^ 123</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/images/recovered.png" alt="">
+                <div class="info">
+                    <h3>Total Recovered Case</h3>
+                    <h3 id="trg">000000</h3>
+                    <h3 id="drg"> ^ 123</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="info">
+                    <h3>last time update</h3>
+                    <h3 id="lastupdateglobal">000000</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- precautions section ends -->
+
+
+<!-- global map section start -->
+<div id="regions_div" style="height: 500px;display: block; margin: 0 auto;"></div>
+<!-- global map section ends -->
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder=" Search For Name Of States......." title="Type in a name">
+
+
+
+    <div class="table-responsive table-striped">
+        <table class="table  text-center " id="myTable">
+        <tr class="header">
+        <th>Location</th>
+        <th>Confirmed-Cases</th>
+        <th>Recovered</th>
+        <th>Deaths</th>
+        <th>Active-Cases</th>
+        </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany<br>123</td>
+            <td>Germany</td>
+            <td>Germany</td>
+            <td>Germany</td>
+          </tr>
+        </table>
+    </div>
+
+<!-- scroll top  -->
+
+<a href="#home" class="scroll-top">
+    <img src="./../images/scroll-img.png" alt="">
+</a>
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!-- custom js file link  -->
+<script src="./../js/script.js"></script>
+<script src="./../datafetch/script.js"></script>
+<script src="./datafetch/script.js"></script>
+
+<script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+
+</body>
+</html>
